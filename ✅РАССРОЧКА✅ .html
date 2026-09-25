@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#111827">
+
+<title>MEBEL MALL — Рассрочка</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    -webkit-tap-highlight-color:transparent;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    background:#f3f5f8;
+    color:#111827;
+    padding:12px;
+}
+
+.container{
+    width:100%;
+    max-width:1050px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    background:#111827;
+    color:#fff;
+    border-radius:22px;
+    padding:20px;
+    margin-bottom:12px;
+    box-shadow:0 7px 25px rgba(0,0,0,.10);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+}
+
+.subtitle{
+    margin-top:5px;
+    color:#cbd5e1;
+    font-size:13px;
+}
+
+/* PRODUCT */
+
+.product{
+    background:#fff;
+    border-radius:22px;
+    padding:17px;
+    margin-bottom:12px;
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+.label{
+    display:block;
+    font-size:11px;
+    color:#64748b;
+    font-weight:900;
+    margin-bottom:6px;
+}
+
+.product input{
+    width:100%;
+    border:2px solid #e5e7eb;
+    border-radius:14px;
+    padding:13px;
+    margin-bottom:12px;
+    font-size:16px;
+    font-weight:700;
+    outline:none;
+}
+
+.price{
+    font-size:27px!important;
+    text-align:center;
+}
+
+.date-input{
+    font-size:16px!important;
+    background:#f8fafc;
+}
+
+/* PLANS */
+
+.plans{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.plan{
+    background:#fff;
+    border-radius:22px;
+    padding:16px;
+    border:2px solid #e5e7eb;
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+.plan-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.percent{
+    font-size:23px;
+    font-weight:900;
+}
+
+.term{
+    background:#f1f5f9;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.small{
+    font-size:11px;
+    color:#64748b;
+}
+
+.total{
+    font-size:24px;
+    font-weight:900;
+    margin:3px 0 12px;
+}
+
+/* INITIAL */
+
+.initial-box{
+    background:#fff7ed;
+    border:1px solid #fed7aa;
+    border-radius:15px;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+.initial-title{
+    color:#9a3412;
+    font-size:11px;
+    font-weight:900;
+    margin-bottom:5px;
+}
+
+.initial-row{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.initial-input{
+    width:100%;
+    min-width:0;
+    border:2px solid #fdba74;
+    border-radius:11px;
+    padding:9px;
+    font-size:17px;
+    font-weight:900;
+    outline:none;
+}
+
+.initial-date{
+    white-space:nowrap;
+    font-size:11px;
+    font-weight:900;
+}
+
+.no-initial{
+    background:#ecfdf5;
+    color:#047857;
+    border:1px solid #a7f3d0;
+    border-radius:14px;
+    padding:11px;
+    text-align:center;
+    font-size:13px;
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+/* SCHEDULE */
+
+.schedule-title{
+    border-top:1px solid #e5e7eb;
+    padding-top:9px;
+    font-size:11px;
+    font-weight:900;
+    color:#475569;
+}
+
+.month{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:7px 4px;
+    border-bottom:1px solid #f1f5f9;
+    font-size:12px;
+}
+
+.month strong{
+    font-size:13px;
+}
+
+.first{
+    background:#fff7ed;
+    border-radius:8px;
+    margin-top:3px;
+}
+
+/* SHARE */
+
+.share{
+    background:#fff;
+    border-radius:22px;
+    padding:17px;
+    margin-top:12px;
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+.share h2{
+    font-size:18px;
+    margin-bottom:4px;
+}
+
+.share p{
+    color:#64748b;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+textarea{
+    width:100%;
+    height:320px;
+    border:2px solid #e5e7eb;
+    border-radius:15px;
+    padding:12px;
+    resize:none;
+    font-family:inherit;
+    font-size:13px;
+    line-height:1.45;
+    background:#f8fafc;
+    outline:none;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-top:9px;
+}
+
+button{
+    border:0;
+    border-radius:14px;
+    padding:14px 8px;
+    font-weight:900;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.copy{
+    background:#111827;
+    color:white;
+}
+
+.whatsapp{
+    background:#16a34a;
+    color:white;
+}
+
+.reset{
+    width:100%;
+    background:#e5e7eb;
+    color:#111827;
+    margin-top:8px;
+}
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:20px;
+    transform:translateX(-50%);
+    background:#111827;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:800;
+    display:none;
+    z-index:9999;
+}
+
+@media(max-width:700px){
+
+    .plans{
+        grid-template-columns:1fr;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .total{
+        font-size:23px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo">
+            MEBEL MALL GROUP
+        </div>
+
+        <div class="subtitle">
+            Калькулятор рассрочки • готовое сообщение для WhatsApp
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCT -->
+
+    <div class="product">
+
+        <label class="label">
+            НАЗВАНИЕ ТОВАРА
+        </label>
+
+        <input
+            id="productName"
+            type="text"
+            value="Мебель"
+            placeholder="Например: Спальня Кристалл"
+        >
+
+
+        <label class="label">
+            ЦЕНА ТОВАРА
+        </label>
+
+        <input
+            id="price"
+            class="price"
+            type="number"
+            value="110000"
+            min="1000"
+            step="100"
+        >
+
+
+        <label class="label">
+            ДАТА ПЕРВОГО ВЗНОСА
+        </label>
+
+        <input
+            id="startDate"
+            class="date-input"
+            type="date"
+            value="2026-09-26"
+        >
+
+    </div>
+
+
+    <!-- PLANS -->
+
+    <div id="plans" class="plans"></div>
+
+
+    <!-- WHATSAPP -->
+
+    <div class="share">
+
+        <h2>
+            📲 Отправить клиенту
+        </h2>
+
+        <p>
+            Даты автоматически рассчитываются через каждые 30 дней.
+        </p>
+
+        <textarea
+            id="message"
+            readonly
+        ></textarea>
+
+
+        <div class="buttons">
+
+            <button
+                class="copy"
+                id="copyBtn"
+            >
+                📋 Копировать
+            </button>
+
+
+            <button
+                class="whatsapp"
+                id="whatsappBtn"
+            >
+                💬 WhatsApp
+            </button>
+
+        </div>
+
+
+        <button
+            class="reset"
+            id="resetBtn"
+        >
+            ↻ Сбросить
+        </button>
+
+    </div>
+
+</div>
+
+
+<div id="toast" class="toast"></div>
+
+
+<script>
+
+"use strict";
+
+
+/* =====================================================
+   ПЛАНЫ
+===================================================== */
+
+const PLANS = [
+
+    {
+        percent:0,
+        months:1,
+        initial:true,
+        initialPercent:50,
+        rounding:100
+    },
+
+    {
+        percent:5,
+        months:3,
+        initial:true,
+        initialPercent:25,
+        rounding:100
+    },
+
+    {
+        percent:10,
+        months:6,
+        initial:true,
+        initialPercent:25,
+        rounding:1000
+    },
+
+    {
+        percent:15,
+        months:9,
+        initial:true,
+        initialPercent:25,
+        rounding:100
+    },
+
+    {
+        percent:20,
+        months:6,
+        initial:false,
+        initialPercent:0,
+        rounding:100
+    }
+
+];
+
+
+/* =====================================================
+   ФОРМАТ ДЕНЕГ
+===================================================== */
+
+function money(value){
+
+    return Math.round(value)
+        .toLocaleString("ru-RU")
+        .replace(/\u00A0/g," ")
+        + " ₽";
+
+}
+
+
+/* =====================================================
+   ДАТА
+===================================================== */
+
+const monthNames = [
+    "января",
+    "февраля",
+    "марта",
+    "апреля",
+    "мая",
+    "июня",
+    "июля",
+    "августа",
+    "сентября",
+    "октября",
+    "ноября",
+    "декабря"
+];
+
+
+function getStartDate(){
+
+    const value =
+        document.getElementById(
+            "startDate"
+        ).value;
+
+
+    if(!value){
+
+        return new Date(2026,8,26);
+
+    }
+
+
+    const parts =
+        value.split("-");
+
+
+    return new Date(
+        Number(parts[0]),
+        Number(parts[1])-1,
+        Number(parts[2])
+    );
+
+}
+
+
+/*
+   Каждый платёж = ровно +30 суток.
+*/
+
+function getDate(days){
+
+    const date =
+        getStartDate();
+
+
+    date.setDate(
+        date.getDate() + days
+    );
+
+
+    return date;
+
+}
+
+
+function formatDate(date){
+
+    return (
+        date.getDate() +
+        " " +
+        monthNames[date.getMonth()]
+    );
+
+}
+
+
+/* =====================================================
+   СКЛОНЕНИЕ
+===================================================== */
+
+function monthWord(n){
+
+    if(n === 1)
+        return "месяц";
+
+    if(n >= 2 && n <= 4)
+        return "месяца";
+
+    return "месяцев";
+
+}
+
+
+/* =====================================================
+   РАСЧЁТ
+===================================================== */
+
+function calculate(
+    plan,
+    price,
+    customInitial
+){
+
+    const total =
+        Math.round(
+            price *
+            (1 + plan.percent / 100)
+        );
+
+
+    /* ================================================
+       20% БЕЗ ПЕРВОГО ВЗНОСА
+    ================================================ */
+
+    if(!plan.initial){
+
+        const monthly =
+            Math.floor(
+                total /
+                plan.months /
+                plan.rounding
+            ) *
+            plan.rounding;
+
+
+        const payments=[];
+
+        let rest=total;
+
+
+        for(
+            let i=1;
+            i<=plan.months;
+            i++
+        ){
+
+            let amount;
+
+
+            if(i === plan.months){
+
+                amount=rest;
+
+            }else{
+
+                amount=monthly;
+
+            }
+
+
+            rest-=amount;
+
+
+            payments.push({
+
+                date:getDate(i*30),
+
+                amount:amount
+
+            });
+
+        }
+
+
+        return {
+
+            total:total,
+
+            initial:0,
+
+            payments:payments
+
+        };
+
+    }
+
+
+    /* ================================================
+       0% НА 1 МЕСЯЦ
+    ================================================ */
+
+    if(plan.percent === 0){
+
+        const initial =
+            Math.round(
+                total * 0.5
+            );
+
+
+        return {
+
+            total:total,
+
+            initial:initial,
+
+            payments:[{
+
+                date:getDate(30),
+
+                amount:
+                    total-initial
+
+            }]
+
+        };
+
+    }
+
+
+    /* ================================================
+       ПЕРВОНАЧАЛЬНЫЙ ВЗНОС
+    ================================================ */
+
+    let initial;
+
+
+    if(
+        customInitial !== null &&
+        !isNaN(customInitial)
+    ){
+
+        initial =
+            Math.max(
+                0,
+                Math.min(
+                    customInitial,
+                    total
+                )
+            );
+
+    }else{
+
+        initial =
+            Math.round(
+                total *
+                plan.initialPercent /
+                100
+            );
+
+    }
+
+
+    /*
+       Остаток после первого взноса.
+    */
+
+    const remaining =
+        total-initial;
+
+
+    /*
+       Округление ежемесячного платежа.
+
+       5%  → до 100 ₽
+       10% → до 1 000 ₽
+       15% → до 100 ₽
+    */
+
+    const monthly =
+        Math.floor(
+            remaining /
+            plan.months /
+            plan.rounding
+        ) *
+        plan.rounding;
+
+
+    /*
+       Разница после округления
+       переносится в первый взнос.
+    */
+
+    const distributed =
+        monthly *
+        plan.months;
+
+
+    initial +=
+        remaining -
+        distributed;
+
+
+    initial =
+        Math.round(initial);
+
+
+    const payments=[];
+
+
+    for(
+        let i=1;
+        i<=plan.months;
+        i++
+    ){
+
+        payments.push({
+
+            date:getDate(i*30),
+
+            amount:monthly
+
+        });
+
+    }
+
+
+    return {
+
+        total:total,
+
+        initial:initial,
+
+        payments:payments
+
+    };
+
+}
+
+
+/* =====================================================
+   ПОЛУЧИТЬ РУЧНОЙ ВЗНОС
+===================================================== */
+
+function getCustomInitial(index){
+
+    const input =
+        document.getElementById(
+            "initial-" + index
+        );
+
+
+    if(!input)
+        return null;
+
+
+    const value =
+        Number(input.value);
+
+
+    if(
+        isNaN(value) ||
+        value < 0
+    ){
+
+        return null;
+
+    }
+
+
+    return value;
+
+}
+
+
+/* =====================================================
+   СОЗДАНИЕ КАРТОЧЕК
+===================================================== */
+
+function render(){
+
+    const price =
+        Number(
+            document.getElementById(
+                "price"
+            ).value
+        ) || 0;
+
+
+    const container =
+        document.getElementById(
+            "plans"
+        );
+
+
+    container.innerHTML="";
+
+
+    PLANS.forEach(
+        (plan,index)=>{
+
+
+        const custom =
+            getCustomInitial(index);
+
+
+        const data =
+            calculate(
+                plan,
+                price,
+                custom
+            );
+
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+
+        card.className="plan";
+
+
+        /* ГРАФИК */
+
+        let schedule="";
+
+
+        if(plan.initial){
+
+            schedule += `
+
+                <div class="month first">
+
+                    <span>
+                        ⭐ ${formatDate(getDate(0))}
+                    </span>
+
+                    <strong>
+                        ${money(data.initial)}
+                    </strong>
+
+                </div>
+
+            `;
+
+        }
+
+
+        data.payments.forEach(
+            payment=>{
+
+                schedule += `
+
+                    <div class="month">
+
+                        <span>
+                            ${formatDate(payment.date)}
+                        </span>
+
+                        <strong>
+                            ${money(payment.amount)}
+                        </strong>
+
+                    </div>
+
+                `;
+
+            }
+        );
+
+
+        /* ПЕРВЫЙ ВЗНОС */
+
+        let initialHTML;
+
+
+        if(plan.initial){
+
+            initialHTML = `
+
+                <div class="initial-box">
+
+                    <div class="initial-title">
+                        ПЕРВОНАЧАЛЬНЫЙ ВЗНОС
+                    </div>
+
+                    <div class="initial-row">
+
+                        <input
+                            id="initial-${index}"
+                            class="initial-input"
+                            type="number"
+                            min="0"
+                            step="100"
+                            value="${data.initial}"
+                        >
+
+                        <span class="initial-date">
+                            ${formatDate(getDate(0))}
+                        </span>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        }else{
+
+            initialHTML = `
+
+                <div class="no-initial">
+                    🟢 Без первоначального взноса
+                </div>
+
+            `;
+
+        }
+
+
+        card.innerHTML = `
+
+            <div class="plan-header">
+
+                <div class="percent">
+                    ${plan.percent}%
+                </div>
+
+                <div class="term">
+                    ${plan.months}
+                    ${monthWord(plan.months)}
+                </div>
+
+            </div>
+
+
+            <div class="small">
+                Сумма с процентами
+            </div>
+
+            <div class="total">
+                ${money(data.total)}
+            </div>
+
+
+            ${initialHTML}
+
+
+            <div class="schedule-title">
+                📅 ГРАФИК ПЛАТЕЖЕЙ
+            </div>
+
+
+            ${schedule}
+
+        `;
+
+
+        container.appendChild(card);
+
+
+        if(plan.initial){
+
+            const input =
+                document.getElementById(
+                    "initial-" + index
+                );
+
+
+            input.addEventListener(
+                "input",
+                updateMessage
+            );
+
+
+            input.addEventListener(
+                "change",
+                render
+            );
+
+        }
+
+    });
+
+
+    updateMessage();
+
+}
+
+
+/* =====================================================
+   СООБЩЕНИЕ ДЛЯ WHATSAPP
+===================================================== */
+
+function createMessage(){
+
+    const price =
+        Number(
+            document.getElementById(
+                "price"
+            ).value
+        ) || 0;
+
+
+    const product =
+        document.getElementById(
+            "productName"
+        ).value.trim()
+        || "Мебель";
+
+
+    let text="";
+
+
+    text +=
+        "🛋 " +
+        product +
+        "\n";
+
+
+    text +=
+        "💰 Цена: " +
+        money(price) +
+        "\n\n";
+
+
+    text +=
+        "💳 УСЛОВИЯ РАССРОЧКИ\n\n";
+
+
+    PLANS.forEach(
+        (plan,index)=>{
+
+
+        const custom =
+            getCustomInitial(index);
+
+
+        const data =
+            calculate(
+                plan,
+                price,
+                custom
+            );
+
+
+        text +=
+            (index+1) +
+            "️⃣ " +
+            plan.percent +
+            "% на " +
+            plan.months +
+            " " +
+            monthWord(plan.months) +
+            "\n";
+
+
+        text +=
+            "Сумма с процентами: " +
+            money(data.total) +
+            "\n";
+
+
+        if(plan.initial){
+
+            text +=
+                "Взнос " +
+                money(data.initial) +
+                " " +
+                formatDate(
+                    getDate(0)
+                ) +
+                "\n";
+
+        }else{
+
+            text +=
+                "Без первоначального взноса\n";
+
+        }
+
+
+        data.payments.forEach(
+            payment=>{
+
+                text +=
+                    formatDate(
+                        payment.date
+                    ) +
+                    " " +
+                    money(
+                        payment.amount
+                    ) +
+                    "\n";
+
+            }
+        );
+
+
+        text += "\n";
+
+    });
+
+
+    text +=
+        "📌 MEBEL MALL GROUP";
+
+
+    return text;
+
+}
+
+
+function updateMessage(){
+
+    document.getElementById(
+        "message"
+    ).value =
+        createMessage();
+
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+function toast(message){
+
+    const element =
+        document.getElementById(
+            "toast"
+        );
+
+
+    element.textContent=message;
+
+    element.style.display="block";
+
+
+    setTimeout(
+        ()=>{
+            element.style.display="none";
+        },
+        1800
+    );
+
+}
+
+
+/* =====================================================
+   КОПИРОВАТЬ
+===================================================== */
+
+async function copyMessage(){
+
+    const text =
+        document.getElementById(
+            "message"
+        ).value;
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            text
+        );
+
+        toast(
+            "Сообщение скопировано ✓"
+        );
+
+    }catch(error){
+
+        const area =
+            document.getElementById(
+                "message"
+            );
+
+
+        area.removeAttribute(
+            "readonly"
+        );
+
+
+        area.select();
+
+
+        document.execCommand(
+            "copy"
+        );
+
+
+        area.setAttribute(
+            "readonly",
+            ""
+        );
+
+
+        toast(
+            "Сообщение скопировано ✓"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+function sendWhatsApp(){
+
+    const text =
+        document.getElementById(
+            "message"
+        ).value;
+
+
+    const url =
+        "https://wa.me/?text=" +
+        encodeURIComponent(text);
+
+
+    /*
+       Прямой переход.
+       Это надёжнее window.open()
+       внутри мобильного браузера.
+    */
+
+    window.location.href=url;
+
+}
+
+
+/* =====================================================
+   СБРОС
+===================================================== */
+
+function resetAll(){
+
+    document.getElementById(
+        "productName"
+    ).value="Мебель";
+
+
+    document.getElementById(
+        "price"
+    ).value="110000";
+
+
+    document.getElementById(
+        "startDate"
+    ).value="2026-09-26";
+
+
+    render();
+
+
+    toast(
+        "Калькулятор сброшен"
+    );
+
+}
+
+
+/* =====================================================
+   СОБЫТИЯ
+===================================================== */
+
+document
+    .getElementById("price")
+    .addEventListener(
+        "input",
+        render
+    );
+
+
+document
+    .getElementById("productName")
+    .addEventListener(
+        "input",
+        updateMessage
+    );
+
+
+document
+    .getElementById("startDate")
+    .addEventListener(
+        "change",
+        render
+    );
+
+
+document
+    .getElementById("copyBtn")
+    .addEventListener(
+        "click",
+        copyMessage
+    );
+
+
+document
+    .getElementById("whatsappBtn")
+    .addEventListener(
+        "click",
+        sendWhatsApp
+    );
+
+
+document
+    .getElementById("resetBtn")
+    .addEventListener(
+        "click",
+        resetAll
+    );
+
+
+/* =====================================================
+   ЗАПУСК
+===================================================== */
+
+render();
+
+</script>
+
+</body>
+</html>
